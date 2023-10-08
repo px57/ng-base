@@ -1,0 +1,6 @@
+<ng-container>
+    <span 
+        *ngFor="let line of text_list"
+        [class]="line.className + ' ' + (animate ? 'animate' : '')"
+        >{{ line.char }}</span>
+</ng-container>

@@ -1,0 +1,34 @@
+<div class="header_container">
+    <div class="percent33_inline_blocks">
+        <div class="timer_container">
+            <span style="font-weight: lighter;">
+                Next game &nbsp;<strong>{{ party_time_in_second }}</strong>&nbsp;seconds</span> 
+        </div>
+    </div>
+    <div class="percent33_inline_blocks">
+        <div class="logo_container">
+        </div>
+    </div>
+    <div class="percent33_inline_blocks">
+        <div class="right_container">
+            <div class="balance_container">
+                <div class="balance_title">Balance</div>
+                <div class="balance_value">
+                    {{ account_balance }} 
+                    <app-luck-letter type="balance"></app-luck-letter></div>
+            </div>
+    
+            <div 
+                (click)="profile_dropdown = true"
+                class="user_circle"
+                [ngStyle]="{
+                    'background-image': 'url(' + userService.get_avatar()?.src + ')'
+                }"></div>
+            
+        </div>
+    </div>
+</div>
+
+<app-header-profile-dropdown
+    *ngIf="profile_dropdown"
+    (close)="profile_dropdown = false"></app-header-profile-dropdown>

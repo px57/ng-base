@@ -1,0 +1,55 @@
+.checkbox-container {
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid #f1f1f7;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+}
+
+.checkboxContainerSelected {
+  border: 1px solid #5f2eea;
+  background: rgba(233, 212, 255, 0.5);
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.checkbox > img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.borderBox {
+  border: none;
+}
+
+.checkbox-circle {
+  width: 18px;
+  height: 18px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.borderSelected {
+  border: 1px solid #5f2eea;
+}
+
+.checkbox-circle-selected {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #5f2eea;
+  cursor: pointer;
+}

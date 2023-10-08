@@ -1,0 +1,83 @@
+.voting_star_container.show ul {
+  margin-right: 27px;
+}
+
+.voting_star_container.show li, .voting_star_container.edit li {
+  display: inline-block;
+}
+
+.voting_star_container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.voting_star_container.edit li {
+  font-size: 35px;
+} @media (max-width: 612px) {
+    .voting_star_container.edit li{
+     font-size: 30px;
+    }
+  }
+
+
+.voting_star_container.show li{
+  text-align: center;
+}
+
+  .voting_star_container.show .selected .icon-e_star::before{
+    color: #ffc107ff !important;
+    font-size: 30px;
+  } @media (max-width: 612px) {
+    .voting_star_container.show .selected .icon-e_star::before{
+     font-size: 30px;
+    }
+  }
+
+  .voting_star_container.show li .icon-e_star:before {
+    color: #ebedee ;
+    font-size: 30px;
+  }  @media (max-width: 612px) {
+    .voting_star_container.show li .icon-e_star:before {
+      color: #ebedee ;
+      font-size: 30px;
+    }
+  }
+
+
+  /* Le style destiner au profile */
+  .profile_decorator.show .selected .icon-e_star::before, .profile_decorator.show li .icon-e_star::before {
+    /* font-size: 0.5em; */
+  }
+
+  li {
+    margin: 0px 5px;
+  }
+
+.voting_star_container.edit li {
+
+}
+
+.gold_version li {
+  cursor: pointer;
+  color: #ebedee;
+}
+  .gold_version li.selected {
+    color:#ffc107 !important;
+  }
+
+.gold_version li:hover {
+  color:#ffc107ff;
+}
+
+/*.hovered  {
+  color: red !important;
+  background-color: red;
+}*/
+
+.hovered  .icon-e_star::before {
+  /*color: red !important;*/
+  color: #ffc107ff !important;
+}
+
+/*////////////////////////*/

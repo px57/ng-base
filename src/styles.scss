@@ -1,0 +1,206 @@
+body {
+    background-image: url(/assets/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vh;
+    overflow: hidden;
+    font-family: system-ui;
+}
+
+.percent33_inline_blocks {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    height: 100%;
+}
+
+.percent50_inline_blocks {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    height: 100%;
+}
+.flex-block {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ol {
+      margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, p {
+    margin: 0;
+}
+
+// -> change the scroll bar 
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 10px;
+    height: 100px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+.bg_central_button_gradient {
+  background: linear-gradient(90deg, #e00668 0%, #f5323b 100%) !important;
+
+  &:hover {
+    background: linear-gradient(90deg, #e00668 0%, #f5323b 100%) !important;
+  }
+}
+
+
+.auth_container, dropdown_form_container {
+  width: 300px;
+
+  img {
+    margin: auto;
+    height: 70px;
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 1.4em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="email"], input[type="text"], input[type="password"] {
+    display: block;
+    width: 100%;
+    height: 31px;
+    border-radius: 5px;
+    // border tailwind
+    border: 1px solid rgb(209 213 219);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    // tailwind box-shadow
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  a {
+    color: rgb(79 70 229);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  input[type="submit"] {
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 34px;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    margin-bottom: 40px;
+    cursor: pointer;
+    width: 313px;
+  }
+}
+
+.gold_number {
+  color: #f6cc83;
+  font-weight: 600;
+}
+
+
+.flex-to-center {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  .loader {
+    margin: auto;
+    align-self: center;
+    color: white;
+  }
+}
+
+
+
+.tickets_draw_container {
+  svg {
+    height: 60px !important;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.dropdowinfo_container {
+  padding: 30px;
+
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 0.8em;
+
+    strong {
+      font-size: 1.2em;
+    }
+  }
+
+  ul {
+    li {
+
+    }
+  }
+
+}
+
+.dropdown_form_container {
+  width: unset;
+  padding: 20px;
+  padding-bottom: 0px;
+
+  label {
+    font-weight: bold;
+  }
+  input {
+    width: 100%;
+    height: 34px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 7px;
+  }
+}

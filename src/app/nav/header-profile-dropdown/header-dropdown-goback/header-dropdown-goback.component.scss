@@ -1,0 +1,14 @@
+
+.goback_container {
+    padding: 10px;
+    .go_back {
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 10px;   
+    }
+    
+    .title_container {
+        display: inline-block;
+        font-size: 1.2em;
+    }
+}

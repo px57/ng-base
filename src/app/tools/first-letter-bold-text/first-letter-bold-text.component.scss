@@ -1,0 +1,23 @@
+.first_letter_bold_text {
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+    }
+}
+
+.animate {
+    font-weight: bold;
+}
