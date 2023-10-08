@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './nav/home/home.component';
+// import { HomeComponent } from './nav/home/home.component';
 import { GlobalResolver } from 'src/resolvers/global-resolver';
 
 const routes: Routes = [
   // -> [Route] - Home
-  {
-    path: '**', 
-    component: HomeComponent,
-    resolve: {
-      G: GlobalResolver,
-    }
-  },
+  // {
+  //   path: '**', 
+  //   component: HomeComponent,
+  //   resolve: {
+  //     G: GlobalResolver,
+  //   }
+  // },
   // -> [Route] - Signin
 ];
 

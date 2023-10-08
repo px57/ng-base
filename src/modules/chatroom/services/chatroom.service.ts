@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { WebSocketsConfig } from 'src/app/services/websocket.service';
+// import { WebSocketsConfig } from 'src/app/services/websocket.service';
 
 /**
  * @description: 
@@ -17,7 +17,7 @@ export class ChatroomService {
   /**
    * @description: 
    */
-  public ws_connection: WebSocketsConfig | undefined;
+  public ws_connection: any | undefined;
 
   /**
    * @description: The stream of data from the websocket
