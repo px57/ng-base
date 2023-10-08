@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { WebsocketService } from 'src/app/services/websocket.service';
-import { PlayroomService, CapsuleTime } from 'src/app/services/playroom.service';
+// import { WebsocketService } from 'src/app/services/websocket.service';
+// import { PlayroomService, CapsuleTime } from 'src/app/services/playroom.service';
 import { SigninComponent } from 'src/modules/profile/components/signin/signin.component';
 import { SignupComponent } from 'src/modules/profile/components/signup/signup.component';
 import { ForgetPasswordComponent } from 'src/modules/profile/components/forget-password/forget-password.component';
@@ -22,11 +22,11 @@ export class AppComponent {
   /**
    * @description: 
    */
-  public caps: CapsuleTime = new CapsuleTime();
+  // public caps: CapsuleTime = new CapsuleTime();
 
   constructor(
-    private ws: WebsocketService,
-    private playroomService: PlayroomService,
+    // private ws: WebsocketService,
+    // private playroomService: PlayroomService,
     private switchModalService: SwitchModalService,
   ) {}
 
@@ -34,7 +34,6 @@ export class AppComponent {
    * @description: 
    */
   public ngOnInit() {
-    this.bindPlayroomStream();
     this.setListConfig();
   }
 
@@ -65,53 +64,5 @@ export class AppComponent {
   }
 
 
-  /**
-   * @description: 
-   */
-  public displayTicketListContainer(): boolean {
-    // TODO: check if user has tickets
-    return this.caps.generate_tickets();
-  }
 
-  // --------------------------------------------------------------------------- [STREAM]
-
-  /**
-   * @description:
-   */
-  private bindPlayroomStream(): void {
-    this.playroomService.stream.subscribe((data: any) => {
-      let event_key = 'recept__' + data.event;
-      if ((this as any)[event_key] === undefined) {
-        alert(event_key + ' is not defined in app.component.ts');
-      }
-      (this as any)[event_key](data.data);
-    });
-  }
-
-  /**
-   * @description: 
-   */
-  public recept__lottery_ticket_values(data: any): void { }
-
-  /**
-   * @description: 
-   */
-  public recept__account_balance(data: any): void { }
-
-  /**
-   * @description: 
-   */
-  public recept__party_time(data: any): void {
-    this.caps = data.caps;
-  }
-
-  /**
-   * @description:
-   */
-  public recept__ticket_list(data: any): void { }
-
-  /**
-   * @description: 
-   */
-  public recept__jackpot(data: any) { }
 }
