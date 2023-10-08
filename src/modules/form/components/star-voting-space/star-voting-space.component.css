@@ -1,0 +1,82 @@
+.photo_user_comment img {
+  height: 80px;
+  width: 80px;
+  border-radius: 999px;
+}
+
+.comment_container {
+    background-color: #f5f6f8ff;
+    padding: 35px;
+    color: #1f2022bd;
+    border-radius: 18px;
+    line-height: 1.4em;
+    font-style: italic;
+    font-size: 1.2em;
+    position: relative;
+    margin-top: 35px;
+}
+
+
+
+.titlevoting {
+    font-size: 1.2em;
+    color: #1f2022ff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+.box_comment {
+  margin-top: 25px;
+}
+
+.button_done {
+  margin-top: 35px;
+}
+
+.icon-n_quote {
+    font-size: 35px;
+    color: #e5e5e5;
+    position: absolute;
+    left: -6px;
+    top: -15px;
+}
+
+  .photo-user {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  .profilePicShimmer2 {
+         float: right;
+         height: 80px;
+         width: 80px;
+         border-radius: 50%;
+         animation : shimmer 2s infinite linear;
+         background: linear-gradient(to right, #f6f6f8 4%, #e9e9e9 25%, #f6f6f8 36%);
+         background-size: 1000px 100%;
+
+      } @media (max-width: 375px) {
+    .profilePicShimmer2 {
+    height: 24vw;
+    width: 24vw;
+    }
+  }
+
+  .img-user {
+    background-size: contain;
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+} @media (max-width: 375px) {
+    .img-user {
+    height: 24vw;
+    width: 24vw;
+    }
+  }

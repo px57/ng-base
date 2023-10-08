@@ -1,0 +1,82 @@
+<div
+    (click)="click_central_button()"
+    class="central_button">
+    <ng-container *ngIf="is_not_authenticated()">
+        <ul class="_50percent_divided">
+            <li
+                (mouseenter)="mouseEnter('login')"
+                (mouseleave)="mouseLeave('login')"
+                (click)="general_click('login')">
+                <div class="centered_vertical login_container">
+                    <app-first-letter-bold-text 
+                        text="Login"
+                        [animate]="animate.login">
+
+                    </app-first-letter-bold-text>
+                </div>
+            </li>
+            <li 
+                (mouseenter)="mouseEnter('signup')"
+                (mouseleave)="mouseLeave('signup')"
+                (click)="general_click('signup')">
+                <div class="centered_vertical">
+                    <app-first-letter-bold-text 
+                        text="Signup"
+                        [animate]="animate.signup">
+
+                    </app-first-letter-bold-text>
+                </div>
+            </li>
+        </ul>
+    </ng-container>
+
+    <ng-container *ngIf="is_deposit_fund()">
+        <div
+            (mouseenter)="mouseEnter('deposit_fund')"
+            (mouseleave)="mouseLeave('deposit_fund')"
+            (click)="general_click('deposit_fund')" 
+            class="full_container">
+            <app-first-letter-bold-text
+                [animate]="animate.deposit_fund" 
+                text="Deposit fund"
+                ></app-first-letter-bold-text>
+        </div>
+    </ng-container>
+    
+    <ng-container *ngIf="is_choose_your_bet()">
+        <div 
+            (mouseenter)="mouseEnter('choose_your_bet')"
+            (mouseleave)="mouseLeave('choose_your_bet')"
+            (click)="general_click('choose_your_bet')" 
+            class="full_container">
+            <app-first-letter-bold-text
+                [animate]="animate.choose_your_bet" 
+                text="Choose your bet"></app-first-letter-bold-text>
+        </div>        
+    </ng-container>
+
+    <ng-container *ngIf="is_bet_has_selected()">
+        <div
+            (mouseenter)="mouseEnter('play_select_token')"
+            (mouseleave)="mouseLeave('play_select_token')"
+            (click)="general_click('play_select_token')" 
+            class="full_container">
+            <app-luck-letter 
+                balance="central_menu_version"></app-luck-letter>
+            <app-first-letter-bold-text 
+                [animate]="animate.play_select_token" 
+                text="Play 100"></app-first-letter-bold-text>
+        </div>    
+    </ng-container>
+
+    <ng-container *ngIf="is_null()">
+        <div class="full_container">
+            <app-first-letter-bold-text 
+                text="Load ..."></app-first-letter-bold-text>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="is_playrun()">
+        <app-tickets-draw></app-tickets-draw>
+    </ng-container>
+</div>

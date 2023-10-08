@@ -1,0 +1,59 @@
+
+<div *ngIf="showStarVotingSpace"
+     class="star_voting_space_container">
+    <div class="photo-user">
+        <div class="profilePicShimmer2 animate">
+           <div
+             [ngStyle]="{
+                'backgroundImage': 'url(' + customer.profile_picture +')'
+              }"
+             class="img-user"
+              >
+            </div>
+        </div>
+     </div>
+  <div
+    *ngIf="comment !== null"
+    class="viewer">
+    <app-voting-star
+      style_type="profile_decorator"
+      [profile]="profile"
+      [star_number]="comment.star_number">
+    </app-voting-star>
+
+    <div class="comment_container">
+      <span class="icon-n_quote"></span>
+      {{comment.comment}}
+    </div>
+  </div>
+
+  <form
+    *ngIf="comment === null"
+    [formGroup]="ComponentForm"
+    (ngSubmit)="ngSubmit()"
+    ngNativeValidate>
+          <div class="titlevoting">
+        Please write your feedback
+     </div>
+    <div class= "star_system">
+      <app-voting-star
+        style_type='gold_version'
+        [ComponentForm]="ComponentForm"
+        class= "center"
+      ></app-voting-star>
+
+      <div class="box_comment">
+        <app-textarea
+          [settings]='textareaSettings'
+        ></app-textarea>
+      </div>
+    </div>
+    <div class= "button_done center">
+      <app-submit
+        [submit_loading]="submitLoading"
+        [ComponentForm]="ComponentForm"
+        value="Post"
+      ></app-submit>
+     </div>
+  </form>
+</div>

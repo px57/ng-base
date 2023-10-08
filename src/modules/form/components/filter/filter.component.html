@@ -1,0 +1,28 @@
+<div (click)="open_filter()" [class]="'filter-container ' + color">
+  <p class="small-body-text-sb12">
+    {{ showFilterTitle() }}
+    <!-- <ng-container *ngIf="multiple_select"
+      >({{ selected_counter }})</ng-container> -->
+  </p>
+  <img *ngIf="type === 'single'" src="/assets/BiDownArrow.svg" alt="" />
+  <img
+    *ngIf="type === 'with_cross'"
+    (click)="unselect_all_options($event)"
+    src="/assets/close.svg"
+    alt=""
+  />
+</div>
+
+<div *ngIf="opened" [class]="'option_container ' + object_uuid">
+  <ul>
+    <li
+      *ngFor="let item of options"
+      [ngClass]="{
+        selected: item.selected
+      }"
+      (click)="select_option(item)"
+    >
+      <p>{{ item.name }}</p>
+    </li>
+  </ul>
+</div>

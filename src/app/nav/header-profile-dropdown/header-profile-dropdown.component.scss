@@ -1,0 +1,87 @@
+.header_profile_dropdown_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px 1px rgba(0,0,0,.12), inset 0 -10px 20px -5px rgba(0,0,0,.3), 0 150px 100px -80px rgba(0,0,0,.4), inset 0 1px 4px hsla(0,0%,100%,.6), inset 0 -1px 1px 1px rgba(0,0,0,.2);
+    backdrop-filter: blur(5px);
+
+    .header_profile_dropdown_container {
+
+        background: white;
+        position: absolute;
+        top: 0px;
+        right: 25px;
+        width: 350px;
+        border-radius: 15px;
+        max-height: 70vh;
+        overflow: auto;
+        animation: OpenDropdown .3s linear;
+        animation-fill-mode: forwards;
+        overflow-x: hidden;
+
+        @keyframes OpenDropdown {
+            0% {
+                opacity: 0;
+                transform: translate(349px, -179px) scale(0.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0px, 40px) scale(1);
+            }
+        }
+            
+        .avatar_container {
+            height: 83px;
+
+            .avatar {
+                background: yellow;
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+                float: left;
+                background-size: contain;
+            }
+        }
+    } 
+
+    .dropdown_footer {
+        background: #f3f6fd;
+        margin-top: 15px;
+        width: 100%;
+
+        ul {
+            font-size: .9em;
+            color: #909090;
+            display: flex;
+            justify-content: center;
+        }
+
+        h3 {
+            color: #909090;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.save_button_container {
+    padding: 16px;
+
+
+    button {
+        width: 100%;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #e00668ff 0%, #f5323bff 100%);
+        color: white;
+        font-weight: bold;
+    }
+}

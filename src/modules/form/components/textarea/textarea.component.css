@@ -1,0 +1,23 @@
+textarea {
+    border: solid 1px #eaeff400;
+    color: #1f2022ff;
+    border-radius: 18px;
+    font-size: 1.0em;
+    background-color: #f3f6fd!important;
+    white-space: pre-wrap;
+}
+
+textarea:hover {
+    border: solid 1px #d6d6d6 !important;
+    background-color: unset !important;
+}
+
+.limit_of_caratere {
+  float: right;
+  color: #1f2022ff;
+  font-weight: 500;
+}
+
+.button_done {
+   margin-top: 35px;
+}

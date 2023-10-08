@@ -1,0 +1,16 @@
+<ul [class]="'voting_star_container ' + style_type"
+    [ngClass]="{
+      'show': !edit,
+      'edit': edit
+    }">
+  <li *ngFor="let star of starList; let i = index"
+      (click)="vote(star)"
+      (mouseenter)="starMouseenter(star)"
+      (mouseleave)="starMouseleave(star)"
+      [ngClass]="{
+        'selected': star.index < star_number && star_number_hover === 0,
+        'hovered': star.index < star_number_hover
+      }">
+    <span class="icon-e_star"></span>
+  </li>
+</ul>
