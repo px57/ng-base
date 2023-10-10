@@ -1,2 +1,0 @@
-# ng-loader
-ng-loader
