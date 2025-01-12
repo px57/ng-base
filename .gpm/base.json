@@ -1,0 +1,8 @@
+{
+    "base_path": "/var/projects/base/ng-base/.gpm/base.json",
+    "gpm_path": "/var/projects/base/ng-base/.gpm",
+    "name": "ng-base",
+    "project_type": "project",
+    "repository_url": "https://github.com/px57/ng-base.git",
+    "root_path": "/var/projects/base/ng-base"
+}
