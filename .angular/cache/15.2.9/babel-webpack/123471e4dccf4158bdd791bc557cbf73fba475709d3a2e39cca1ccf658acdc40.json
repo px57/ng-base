@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class DynamicFormManager {}","map":{"version":3,"mappings":"AAEA,OAAM,MAAOA,kBAAkB","names":["DynamicFormManager"],"sourceRoot":"","sources":["/var/projects/gtender/client2/src/modules/form/classes/dynamic_form.ts"],"sourcesContent":["\n\nexport class DynamicFormManager {\n    \n}"]},"metadata":{},"sourceType":"module","externalDependencies":[]}
