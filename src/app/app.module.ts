@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // ------------------------------ [component] ------------------------------
@@ -34,33 +34,27 @@ import { ToolsModule } from 'src/modules/tools/tools.module';
 import { ChatRoomModule } from 'src/modules/chatroom/chatroom.module'; 
 import { ModalModule } from 'src/modules/modal/modal.module';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
-    RouterModule,
-    UploadmanagerModule,
-    FormModule,
-    ProfileModule,
-    ToolsModule,
-    ChatRoomModule,
-    ModalModule,
-  ],
-  providers: [
-    DatetimeService,
-    GlobalsService,
-    BalanceService,
-    FileService,
-    GlobalResolver,
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        CommonModule,
+        RouterModule,
+        UploadmanagerModule,
+        FormModule,
+        ProfileModule,
+        ToolsModule,
+        ChatRoomModule,
+        ModalModule], providers: [
+        DatetimeService,
+        GlobalsService,
+        BalanceService,
+        FileService,
+        GlobalResolver,
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule { }
