@@ -1,0 +1,26 @@
+<div
+  class="checkbox-container"
+  [ngClass]="{
+    checkboxContainerSelected: state
+  }"
+>
+  <div
+    *ngIf="type === 'checkbox'"
+    class="checkbox"
+    [ngClass]="{ borderBox: state }"
+    (click)="toggleState()"
+  >
+    <img *ngIf="state" src="/assets/check-button.svg" alt="" />
+  </div>
+
+  <div
+    *ngIf="type === 'checkbox_circle'"
+    class="checkbox-circle"
+    [ngClass]="{
+      borderSelected: state
+    }"
+    (click)="toggleState()"
+  >
+    <div *ngIf="state" class="checkbox-circle-selected"></div>
+  </div>
+</div>

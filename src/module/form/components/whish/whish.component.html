@@ -1,0 +1,13 @@
+<div class="buttonfollow"
+     (click)="click__event()"
+     [class]="profile.in_my_wishlist ? 'unfollow_container': 'follow_container'"
+     >
+  <div [class]="'whish_container ' + classList">
+<!--     <span *ngIf="!profile.in_my_wishlist" class="icon-HEART"></span>
+    <span *ngIf="profile.in_my_wishlist" class="icon-HEART_FULL"></span> -->
+  </div>
+  
+  <button>
+    {{!profile.in_my_wishlist ? 'Follow': 'Unfollow'}}
+  </button>
+</div>
