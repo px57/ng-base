@@ -74,18 +74,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "taskbox:build",
-            "proxyConfig": "proxy.conf.js"
+            "proxyConfig": "proxy.conf.js",
+            "buildTarget": "taskbox:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "client:build:production"
+              "buildTarget": "client:build:production"
             },
             "development": {
-              "browserTarget": "client:build:development"
+              "buildTarget": "client:build:development"
             },
             "fr": {
-              "browserTarget": "client:build:fr"
+              "buildTarget": "client:build:fr"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "client:build"
+            "buildTarget": "client:build"
           }
         },
         "test": {
@@ -179,10 +179,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ctrl:build:production"
+              "buildTarget": "ctrl:build:production"
             },
             "development": {
-              "browserTarget": "ctrl:build:development"
+              "buildTarget": "ctrl:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -190,7 +190,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ctrl:build"
+            "buildTarget": "ctrl:build"
           }
         },
         "test": {
